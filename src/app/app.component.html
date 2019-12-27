@@ -1,0 +1,42 @@
+<h2>Crud Application</h2>
+<table>
+  <tr>
+    <th>Employee Name</th>
+    <th>Id</th>
+    <th>Company</th>
+    <th>Age</th>
+    <th>Designation</th>
+    <th>Actions</th>
+  </tr>
+  <tbody>
+    <tr *ngFor="let employee of EmployeesData; let i = index">
+      <td>{{employee.empname}}</td>
+      <td>{{employee.id}}</td>
+      <td>{{employee.company}}</td>
+      <td>{{employee.age}}</td>
+      <td>{{employee.disignation}}</td>
+      <td><button class="edit" (click)="editEmpData(employee, i)">Edit Details</button>
+        <button class="del" (click)="deleteData(i)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<form #f="ngForm" name="userdata" (submit)="addEmp(item)">
+  <label for="name">Employee Name: </label>
+  <input type="text" id="name" name="empname" [(ngModel)]="item.empname"><br><br>
+  <label for="id">Employee Id: </label>
+  <input type="text" id="id" name="empid" [(ngModel)]="item.id"> <br><br>
+
+  <label for="comp">Employee Company: </label>
+  <input type="text" id="comp" name="empcomp" [(ngModel)]="item.company"><br><br>
+
+  <label for="age">Employee Age: </label>
+  <input type="text" id="age" name="empage" [(ngModel)]="item.age"><br><br>
+
+  <label for="design">Employee Designation: </label>
+  <input type="text" id="design" name="empdesignation" [(ngModel)]="item.disignation"><br><br>
+
+<button type="submit" class="sub" *ngIf="addUser">Submit</button>
+<button type="button" class="update" *ngIf="!addUser" (click)="updateEmpData(param)">Update</button>
+</form>

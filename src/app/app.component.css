@@ -1,0 +1,47 @@
+h2 {
+  margin: 0 0 0 300px;
+  color: red;
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 50px 0 0 50px;
+}
+  
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.edit {
+  border: 1px solid white;
+  background: greenyellow;
+  padding: 6px;
+}
+.del {
+  background: red;
+  border: 1px solid white;
+  padding: 6px;
+  margin: 0 0 0 15px;
+  color: wheat;
+}
+form {
+  margin: 0 0 0 100px;
+}
+.sub {
+  border: 1px solid yellow;
+  background: white;
+  color: green;
+  padding: 8px;
+  border-radius: 5px;
+}
+.update {
+  border: 1px solid red;
+  background: white;
+  color: rgb(red, green, blue);
+  padding: 8px;
+  border-radius: 5px;
+}
+  
+  
